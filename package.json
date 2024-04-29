@@ -1,0 +1,29 @@
+{
+  "name": "samlayouts",
+  "version": "1.0.0",
+  "description": "🎨 SamLayouts offers a dynamic assortment of React layout components designed to elevate the structure and organization of your web applications. From responsive grids and adaptable containers to intuitive navigation bars and sidebar layouts, 🚀 SamLayouts equips you with the tools to craft visually appealing and user-friendly interfaces. With user-friendly components and customizable options, 🛠️ SamLayouts empowers developers to create polished layouts that seamlessly adapt to various screen sizes and devices. Simplify your UI development process and achieve stunning results with 🌟 SamLayouts.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sameerkali/SamLayouts.git"
+  },
+  "keywords": [
+    "sameerkali"
+  ],
+  "author": "sameerkali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sameerkali/SamLayouts/issues"
+  },
+  "homepage": "https://github.com/sameerkali/SamLayouts#readme",
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}
