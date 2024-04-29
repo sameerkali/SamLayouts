@@ -2,8 +2,19 @@
   "name": "samlayouts",
   "version": "1.0.0",
   "description": "🎨 SamLayouts offers a dynamic assortment of React layout components designed to elevate the structure and organization of your web applications. From responsive grids and adaptable containers to intuitive navigation bars and sidebar layouts, 🚀 SamLayouts equips you with the tools to craft visually appealing and user-friendly interfaces. With user-friendly components and customizable options, 🛠️ SamLayouts empowers developers to create polished layouts that seamlessly adapt to various screen sizes and devices. Simplify your UI development process and achieve stunning results with 🌟 SamLayouts.",
-  "main": "index.js",
-  "scripts": {},
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "husky",
+    "lint": "eslint ./src/ --ext .ts,.tsx",
+    "lint:fix": "eslint ./src --ext .ts,.tsx --fix",
+    "release": "standard-version"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sameerkali/SamLayouts.git"
@@ -18,9 +29,15 @@
   },
   "homepage": "https://github.com/sameerkali/SamLayouts#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2",
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
