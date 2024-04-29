@@ -4,6 +4,10 @@
   "description": "🎨 SamLayouts offers a dynamic assortment of React layout components designed to elevate the structure and organization of your web applications. From responsive grids and adaptable containers to intuitive navigation bars and sidebar layouts, 🚀 SamLayouts equips you with the tools to craft visually appealing and user-friendly interfaces. With user-friendly components and customizable options, 🛠️ SamLayouts empowers developers to create polished layouts that seamlessly adapt to various screen sizes and devices. Simplify your UI development process and achieve stunning results with 🌟 SamLayouts.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -15,12 +19,29 @@
     "lint:fix": "eslint ./src --ext .ts,.tsx --fix",
     "release": "standard-version"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "babel": {
+    "sourceType": "unambiguous",
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sameerkali/SamLayouts.git"
   },
   "keywords": [
-    "sameerkali"
+    "sameerkali",
+    "components library"
   ],
   "author": "sameerkali",
   "license": "MIT",
@@ -29,14 +50,23 @@
   },
   "homepage": "https://github.com/sameerkali/SamLayouts#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^15.0.5",
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.3.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-postcss": "^4.0.2",
+    "styled-components": "^6.1.8",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5"
   },
